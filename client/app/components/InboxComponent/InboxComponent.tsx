@@ -14,9 +14,8 @@ const InboxComponent: React.FC<InboxProps> = ({ messages }) => {
   const shouldShowMessageCount = messages.length > 2;
 
   return (
-    <div className="bg-transparent
-     p-4 rounded-lg h-36 shadow">
-      <h2 className="text-xl font-semibold mb-4">
+    <div className="bg-opacity-40 p-4 rounded-md backdrop-blur-lg shadow">
+      <h2 className="text-xl text-white font-semibold mb-4">
         {shouldShowMessageCount
           ? `Inbox (${messages.length})`
           : 'Inbox'
@@ -24,7 +23,7 @@ const InboxComponent: React.FC<InboxProps> = ({ messages }) => {
       </h2>
       <div className="space-y-4">
         {shouldShowMessageCount ? (
-          <p className="text-gray-500">
+          <p className="text-white">
             You have {messages.length} messages.
           </p>
         ) : (

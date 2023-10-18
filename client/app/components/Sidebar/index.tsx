@@ -1,26 +1,29 @@
 import React from 'react';
 import Link from 'next/link';
+import logo from '../../../public/logo.jpg';
+import person from '../../../public/profile.png';
 import { FiHome, FiInbox, FiCheckCircle, FiUser } from 'react-icons/fi'; // Import icons from react-icons
 import { RiTeamLine, RiOrganizationChart } from 'react-icons/ri'; // Import icons from react-icons
+import Image from 'next/image';
 
 const navigationLinks = [
-  { href: '/dashboard/home', text: 'Home', icon: <FiHome size={24} /> },
-  { href: '/dashboard/tasks', text: 'Tasks', icon: <FiCheckCircle size={24} /> },
-  { href: '/dashboard/inbox', text: 'Inbox', icon: <FiInbox size={24} /> },
-  { href: '/dashboard/tasks', text: 'My Team', icon: <RiTeamLine size={24} /> },
-  { href: '/dashboard/tasks', text: 'ORG', icon: <RiOrganizationChart size={24} /> },
-  { href: '/dashboard/profile', text: 'Profile', icon: <FiUser size={24} /> },
+  { href: '/home', text: 'Home', icon: <FiHome size={24} /> },
+  { href: '/tasks', text: 'Tasks', icon: <FiCheckCircle size={24} /> },
+  { href: '/inbox', text: 'Inbox', icon: <FiInbox size={24} /> },
+  { href: '/tasks', text: 'My Team', icon: <RiTeamLine size={24} /> },
+  { href: '/tasks', text: 'ORG', icon: <RiOrganizationChart size={24} /> },
+  { href: '/profile', text: 'Profile', icon: <FiUser size={24} /> },
 ];
 RiTeamLine
 
 const Sidebar: React.FC = () => {
   return (
-    <aside className="bg-[#021350] text-white w-64 p-4 flex flex-col min-h-screen rounded-br-xl">
+    <aside className="backdrop-blur-lg shadow text-white w-64 p-4 flex flex-col h-screen rounded-br-xl">
       <div className="flex items-center justify-center h-1/6">
-        <img
-          src={require('/public/profile.png')}
+        <Image
+          src={logo}
           alt="Logo"
-          className="w-12 h-12 rounded-full"
+          className="w-20 h-20 rounded-full"
         />
       </div>
       <div className="flex flex-col justify-between flex-grow p-6">
@@ -36,13 +39,13 @@ const Sidebar: React.FC = () => {
             </li>
           ))}
         </ul>
-        <div className="mt-2">
-          <img
-            src={require('public/profile.png')}
+        <div className="m-2">
+          <Image
+            src={person}
             alt="User"
             className="w-12 h-12 rounded-full mx-auto"
           />
-          <p className="mt-2 text-center">User Name</p>
+          <p className="m-2 text-center">User Name</p>
         </div>
       </div>
     </aside>

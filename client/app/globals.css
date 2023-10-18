@@ -4,6 +4,8 @@
 @import 'tailwindcss/utilities';
 
 body {
+    
     overflow: hidden;
+    height: max-content;
 }
 

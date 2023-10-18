@@ -1,6 +1,8 @@
+import Image from 'next/image';
+import person from '../../../public/profile.png';
 const Navbar: React.FC = () => {
     return (
-      <nav className="bg-[#a8d3eb] p-4 flex justify-between items-center">
+      <nav className="shadow-lg p-4 flex justify-between items-center">
         <div className="flex items-center flex-grow"> 
           <input
             type="text"
@@ -10,10 +12,10 @@ const Navbar: React.FC = () => {
         </div>
         <div>
           
-          <img
-            src="../../../public/profile.png"
+          <Image
+            src={person}
             alt="User"
-            className="w-8 h-8 rounded-full"
+            className="w-12 h-12 rounded-full"
           />
         </div>
       </nav>

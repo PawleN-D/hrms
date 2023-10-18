@@ -11,6 +11,10 @@ const config: Config = {
       colors: {
         'regal-blue': '#243c5a',
       },
+      backgroundImage: {
+        'blur': "url('../public/background.jpg')",
+        'waves': "url('../public/waves.jpg')",
+      },
     }
 
   },

@@ -69,7 +69,7 @@ export const employees = [
       department: "Engineering",
       salary: 90000,
       hourlyRate: 45,
-      employeeImage: "/path/to/employee-picture.jpg",
+      employeeImage: "/public/profile.png",
       email: "arun.gupta@example.com",
       password: "password123",
     },
