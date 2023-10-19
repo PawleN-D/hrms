@@ -14,6 +14,12 @@ const config: Config = {
       backgroundImage: {
         'blur': "url('../public/background.jpg')",
         'waves': "url('../public/waves.jpg')",
+        'black': "url('../public/black.jpg')",
+        'blue': "url('../public/blue.jpg')",
+        'gradient': "url('../public/gradient.jpg')",
+        'deep': "url('../public/deep.jpg')",
+        'deepmind': "url('../public/deepmind.jpg')",
+        'mountain': "url('../public/bg-mountain.jpg')",
       },
     }
 

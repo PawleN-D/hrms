@@ -18,7 +18,7 @@ RiTeamLine
 
 const Sidebar: React.FC = () => {
   return (
-    <aside className="backdrop-blur-lg shadow text-white w-64 p-4 flex flex-col h-screen rounded-br-xl">
+    <aside className="backdrop-brightness-125 shadow text-white w-64 p-4 flex flex-col h-screen rounded-br-xl">
       <div className="flex items-center justify-center h-1/6">
         <Image
           src={logo}

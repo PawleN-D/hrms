@@ -8,7 +8,7 @@ interface TodayProps {
 
 const TodayComponent: React.FC<TodayProps> = ({ news, posts }) => {
   return (
-    <div className="bg-opacity-40 p-4 rounded-md backdrop-blur-lg shadow">
+    <div className="bg-opacity-40 p-4 rounded-md backdrop-brightness-50 shadow">
       <h2 className="text-xl text-white font-semibold mb-4">Today</h2>
       <div className="space-y-4">
         <h3 className="text-lg font-medium">News</h3>

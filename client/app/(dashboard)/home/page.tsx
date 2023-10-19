@@ -5,6 +5,10 @@ import HolidayComponent from '@/app/components/Holidays/Holidays';
 import InboxComponent from '@/app/components/InboxComponent/InboxComponent';
 import LeaveComponent from '@/app/components/OnLeave/OnLeaveComponent';
 import TodayComponent from '@/app/components/Today/TodayComponent';
+import LeaveBalance from '@/app/components/LeaveBalance/LeaveBalance';
+import DateTimeDisplay from '@/app/components/DateCard/DateDisplay';
+import CircularImageWithText from '@/app/components/GeneralComponent/CardComponent';
+;
 
 const Dashboard: React.FC = () => {
   const user = employees[0];
@@ -21,11 +25,16 @@ const Dashboard: React.FC = () => {
           </div>
           <div className="col-span-1">
             <TodayComponent news={["News 1", "News 2"]} posts={["Post 1", "Post 2"]} />
+            <br />
+            <CircularImageWithText heading={'Working Remotely'} subheading={'Everyone is at office'} message={'Nobody Remote today'} />
           </div>
           <div className="col-span-1">
+            <LeaveBalance />
           </div>
           <div className="col-span-1">
-
+            <DateTimeDisplay />
+            <br />
+            <CircularImageWithText heading={'On Leave'} subheading={'Everyone is at office'} message={'Nobody is on leave today'} />
           </div>
         </div>
       </div>
