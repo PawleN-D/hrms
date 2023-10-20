@@ -14,14 +14,22 @@ interface LeaveRequest {
   reason: string;
 }
 
-const InboxPageComponent: React.FC = (props) => {
-  const [inboxMessages, setInboxMessages] = useState<Message[]>(props.initialInboxMessages);
-  const [leaveRequests, setLeaveRequests] = useState<LeaveRequest[]>(props.initialLeaveRequests);
+const InboxPageComponent: React.FC = () => {
+  // const [inboxMessages, setInboxMessages] = useState<Message[]>();
+  // const [leaveRequests, setLeaveRequests] = useState<LeaveRequest[]>();
   const [selectedMessage, setSelectedMessage] = useState<Message | null>(null);
   const [selectedRequest, setSelectedRequest] = useState<LeaveRequest | null>(null);
 
   // Sample data (you can replace this with your own data)
+  const initialInboxMessages: Message[] = [
+    { id: 1, subject: 'Message 1', content: 'This is message 1 content.' },
+    { id: 2, subject: 'Message 2', content: 'This is message 2 content.' },
+  ];
 
+  const initialLeaveRequests: LeaveRequest[] = [
+    { id: 1, title: 'Leave Request 1', reason: 'Vacation' },
+    { id: 2, title: 'Leave Request 2', reason: 'Sick leave' },
+  ];
   // Function to open a modal when a message or request is clicked
   const openMessageModal = (message: Message) => {
     setSelectedMessage(message);
@@ -42,8 +50,8 @@ const InboxPageComponent: React.FC = (props) => {
       <div className="w-1/2 p-4 backdrop-brightness-50">
         <h2 className="text-2xl font-bold mb-4">New Messages (Inbox)</h2>
         <ul>
-          {inboxMessages.length > 0 ? (
-            inboxMessages.map((message) => (
+          {initialInboxMessages.length > 0 ? (
+            initialInboxMessages.map((message) => (
               <li
                 key={message.id}
                 onClick={() => openMessageModal(message)}
@@ -60,8 +68,8 @@ const InboxPageComponent: React.FC = (props) => {
       <div className="w-1/2 p-4 backdrop-brightness-50">
         <h2 className="text-2xl font-bold mb-4">Leave Requests</h2>
         <ul>
-          {leaveRequests.length > 0 ? (
-            leaveRequests.map((request) => (
+          {initialLeaveRequests.length > 0 ? (
+            initialLeaveRequests.map((request) => (
               <li
                 key={request.id}
                 onClick={() => openRequestModal(request)}
