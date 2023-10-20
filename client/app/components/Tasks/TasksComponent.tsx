@@ -14,7 +14,7 @@ interface Task {
 }
 
 const TaskList: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<string>('All Tasks'); // Initialize the activeTab state
+  const [activeTab, setActiveTab] = useState<string>('My Tasks'); // Initialize the activeTab state
 
   const allTasks: Task[] = [
     { id: 1, title: 'Task 1', description: 'Description for Task 1' },

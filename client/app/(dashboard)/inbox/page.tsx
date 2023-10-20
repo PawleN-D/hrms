@@ -1,7 +1,9 @@
-"use client"
-import Modal from '@/app/components/Modal/Modal';
-import React, { useState } from 'react';
-
+// pages/dashboard.tsx
+import React from 'react';
+import { employees } from '../../../Employees';
+import InboxComponent from '@/app/components/InboxComponent/InboxComponent';
+import TabbedComponent from '@/app/components/TabsComponent';
+import InboxPageComponent from '@/app/components/InboxPageComponent/InboxPageComponent';
 interface Message {
   id: number;
   subject: string;
@@ -15,12 +17,6 @@ interface LeaveRequest {
 }
 
 const InboxPage: React.FC = () => {
-  const [inboxMessages, setInboxMessages] = useState<Message[]>([]);
-  const [leaveRequests, setLeaveRequests] = useState<LeaveRequest[]>([]);
-  const [selectedMessage, setSelectedMessage] = useState<Message | null>(null);
-  const [selectedRequest, setSelectedRequest] = useState<LeaveRequest | null>(null);
-
-  // Sample data (you can replace this with your own data)
   const initialInboxMessages: Message[] = [
     { id: 1, subject: 'Message 1', content: 'This is message 1 content.' },
     { id: 2, subject: 'Message 2', content: 'This is message 2 content.' },
@@ -30,74 +26,9 @@ const InboxPage: React.FC = () => {
     { id: 1, title: 'Leave Request 1', reason: 'Vacation' },
     { id: 2, title: 'Leave Request 2', reason: 'Sick leave' },
   ];
-
-  // Function to open a modal when a message or request is clicked
-  const openMessageModal = (message: Message) => {
-    setSelectedMessage(message);
-  };
-
-  const openRequestModal = (request: LeaveRequest) => {
-    setSelectedRequest(request);
-  };
-
-  // Function to close the modal
-  const closeModal = () => {
-    setSelectedMessage(null);
-    setSelectedRequest(null);
-  };
-
   return (
-    <div className="flex">
-      <div className="w-1/2 p-4 backdrop-brightness-50">
-        <h2 className="text-2xl font-bold mb-4">New Messages (Inbox)</h2>
-        <ul>
-          {initialInboxMessages.length > 0 ? (
-            initialInboxMessages.map((message) => (
-              <li
-                key={message.id}
-                onClick={() => openMessageModal(message)}
-                className="cursor-pointer text-blue-500 hover:underline"
-              >
-                {message.subject}
-              </li>
-            ))
-          ) : (
-            <p>No new messages.</p>
-          )}
-        </ul>
-      </div>
-      <div className="w-1/2 p-4">
-        <h2 className="text-2xl font-bold mb-4">Leave Requests</h2>
-        <ul>
-          {initialLeaveRequests.length > 0 ? (
-            initialLeaveRequests.map((request) => (
-              <li
-                key={request.id}
-                onClick={() => openRequestModal(request)}
-                className="cursor-pointer text-green-500 hover:underline"
-              >
-                {request.title}
-              </li>
-            ))
-          ) : (
-            <p>No leave requests.</p>
-          )}
-        </ul>
-      </div>
-      {selectedMessage && (
-        <Modal
-          title={selectedMessage.subject}
-          content={selectedMessage.content}
-          onClose={closeModal}
-        />
-      )}
-      {selectedRequest && (
-        <Modal
-          title={selectedRequest.title}
-          content={selectedRequest.reason}
-          onClose={closeModal}
-        />
-      )}
+    <div className="bg-opacity-30 min-h-screen p-4">
+      <InboxPageComponent initialInboxMessages={initialInboxMessages} initialLeaveRequests={initialLeaveRequests} />
     </div>
   );
 };
