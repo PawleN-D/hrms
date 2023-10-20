@@ -7,9 +7,9 @@ interface HolidayProps {
 
 const HolidayComponent: React.FC<HolidayProps> = ({ holidays }) => {
   return (
-    <div className="bg-white p-4 rounded-lg shadow">
-      <h2 className="text-xl font-semibold mb-4">Holidays</h2>
-      <ul className="list-disc pl-4">
+    <div className="bg-opacity-40 p-4 rounded-md backdrop-brightness-50 shadow h-32">
+      <h2 className="text-xl text-white font-semibold mb-4">Holidays</h2>
+      <ul className="list-disc text-white pl-4">
         {holidays.map((holiday) => (
           <li key={holiday}>{holiday}</li>
         ))}
