@@ -7,7 +7,7 @@ const LoginPage: React.FC<LoginPageProps> = (): ReactElement => {
   const handleSuccessfulLogin = () => {
     // Handle successful login here and navigate to the desired page
     // For example, you can use window.location.href
-    window.location.href = "/dashboard/home";
+    window.location.href = "/home";
   };
 
   return (
