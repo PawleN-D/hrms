@@ -1,6 +1,7 @@
 "use client"
-import Modal from '@/app/components/Modal/Modal';
+
 import React, { useState } from 'react';
+import Modal from '../Modal/Modal';
 
 interface Message {
   id: number;
