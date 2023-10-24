@@ -1,4 +1,4 @@
-import TaskList from '@/app/components/Tasks/TasksComponent'
+import TaskList from '@/components/Tasks/TasksComponent'
 import React from 'react'
 
 const Task = () => {

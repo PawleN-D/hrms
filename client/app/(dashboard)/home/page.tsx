@@ -1,14 +1,13 @@
 
 import React from 'react';
 import { employees } from '../../../Employees';
-import HolidayComponent from '@/app/components/Holidays/Holidays';
-import InboxComponent from '@/app/components/InboxComponent/InboxComponent';
-import LeaveComponent from '@/app/components/OnLeave/OnLeaveComponent';
-import TodayComponent from '@/app/components/Today/TodayComponent';
-import LeaveBalance from '@/app/components/LeaveBalance/LeaveBalance';
-import DateTimeDisplay from '@/app/components/DateCard/DateDisplay';
-import CircularImageWithText from '@/app/components/GeneralComponent/CardComponent';
-;
+import DateTimeDisplay from '@/components/DateCard/DateDisplay';
+import CircularImageWithText from '@/components/GeneralComponent/CardComponent';
+import HolidayComponent from '@/components/Holidays/Holidays';
+import InboxComponent from '@/components/InboxComponent/InboxComponent';
+import LeaveBalance from '@/components/LeaveBalance/LeaveBalance';
+import LeaveComponent from '@/components/OnLeave/OnLeaveComponent';
+import TodayComponent from '@/components/Today/TodayComponent';;
 
 const Dashboard: React.FC = () => {
   const user = employees[0];
