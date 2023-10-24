@@ -1,9 +1,7 @@
 // pages/dashboard.tsx
+import InboxPageComponent from '@/components/InboxPageComponent/InboxPageComponent';
 import React from 'react';
-import { employees } from '../../../Employees';
-import InboxComponent from '@/app/components/InboxComponent/InboxComponent';
-import TabbedComponent from '@/app/components/TabsComponent';
-import InboxPageComponent from '@/app/components/InboxPageComponent/InboxPageComponent';
+
 interface Message {
   id: number;
   subject: string;

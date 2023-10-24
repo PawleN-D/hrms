@@ -67,8 +67,8 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
         <Link href="/">
           <Image
             width={176}
-            height={32}
-            src={"/images/logo/logo.svg"}
+            height={202}
+            src={"/images/logo/kempshire-logo.svg"}
             alt="Logo"
           />
         </Link>
