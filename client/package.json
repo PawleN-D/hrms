@@ -1,5 +1,5 @@
 {
-  "name": "ems",
+  "name": "hr_mananagement_system",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,28 +11,29 @@
   "dependencies": {
     "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^1.0.6",
+    "@react-jvectormap/core": "^1.0.4",
+    "@react-jvectormap/unitedstates": "^1.0.1",
+    "@types/node": "20.4.8",
+    "@types/react": "18.2.18",
+    "@types/react-dom": "18.2.7",
+    "apexcharts": "^3.44.0",
+    "autoprefixer": "10.4.14",
     "clsx": "^2.0.0",
+    "eslint": "8.46.0",
+    "eslint-config-next": "13.4.12",
     "jsonwebtoken": "^9.0.2",
-    "next": "latest",
+    "next": "13.4.12",
     "next-auth": "^4.23.2",
-    "react": "latest",
-    "react-dom": "latest",
+    "postcss": "8.4.27",
+    "react": "18.2.0",
+    "react-apexcharts": "^1.4.1",
+    "react-dom": "18.2.0",
     "react-hook-form": "^7.47.0",
     "react-icons": "^4.11.0",
+    "react-jvectormap": "^0.0.16",
     "react-tabs": "^6.0.2",
     "tailwind-merge": "^1.14.0",
-    "zustand": "^4.4.3"
-  },
-  "devDependencies": {
-    "@types/jsonwebtoken": "^9.0.3",
-    "@types/node": "latest",
-    "@types/react": "latest",
-    "@types/react-dom": "latest",
-    "autoprefixer": "latest",
-    "eslint": "latest",
-    "eslint-config-next": "latest",
-    "postcss": "latest",
-    "tailwindcss": "latest",
-    "typescript": "latest"
+    "tailwindcss": "3.3.3",
+    "typescript": "5.1.6"
   }
 }
