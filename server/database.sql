@@ -1,8 +1,5 @@
 -- Create the HRMS database
-CREATE DATABASE HRMS;
-
--- Use the HRMS database
-USE HRMS;
+CREATE DATABASE HRMS_DEV;
 
 -- Create the Users table
 CREATE TABLE Users (
