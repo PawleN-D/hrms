@@ -1,6 +1,6 @@
+import Sidebar from '@/components/Sidebar'
 import React, { Children } from 'react'
-import Navbar from '../components/Header'
-import Sidebar from '../components/Sidebar'
+
 
 function Layout({
   children,
@@ -9,9 +9,10 @@ function Layout({
 }) {
   return (
     <div className="flex">
-      <Sidebar />
+      <Sidebar sidebarOpen={false} setSidebarOpen={function (arg: boolean): void {
+        throw new Error('Function not implemented.')
+      } } />
       <div className="flex-1">
-        <Navbar />
         {children}
       </div>
     </div>
