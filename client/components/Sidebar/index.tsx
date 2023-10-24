@@ -10,7 +10,7 @@ interface SidebarProps {
 }
 
 const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
-  const pathname = usePathname();
+  const pathname = usePathname() || '';
 
   const trigger = useRef<any>(null);
   const sidebar = useRef<any>(null);
@@ -67,8 +67,8 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
         <Link href="/">
           <Image
             width={176}
-            height={202}
-            src={"/images/logo/kempshire-logo.svg"}
+            height={32}
+            src={"/images/logo/logo.svg"}
             alt="Logo"
           />
         </Link>
@@ -103,7 +103,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
           {/* <!-- Menu Group --> */}
           <div>
             <h3 className="mb-4 ml-4 text-sm font-semibold text-bodydark2">
-              MAIN
+              M
             </h3>
 
             <ul className="mb-6 flex flex-col gap-1.5">

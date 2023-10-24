@@ -1,7 +1,8 @@
 import React from 'react'
-import { employees } from '../../../Employees';
+;
 import Image from 'next/image';
 import person from '../../../public/profile.png';
+import { employees } from '@/Employees';
 
 const ProfileComponent = () => {
     const user = employees[0];
