@@ -103,7 +103,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
           {/* <!-- Menu Group --> */}
           <div>
             <h3 className="mb-4 ml-4 text-sm font-semibold text-bodydark2">
-              M
+              INTERNAL
             </h3>
 
             <ul className="mb-6 flex flex-col gap-1.5">
@@ -189,6 +189,16 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                               } `}
                             >
                               Administrator
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="/employee"
+                              className={`group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white ${
+                                pathname === "/" && "text-white"
+                              } `}
+                            >
+                              Employee
                             </Link>
                           </li>
                         </ul>
