@@ -4,7 +4,6 @@ import TableThree from '../Tables/TableThree';
 import Chart from '@/app/chart/page';
 import ChartOne from '../Charts/ChartOne';
 import Link from 'next/link';
-import Calendar from '../Calender';
 import TableOne from '../Tables/TableOne';
 
 const LeftHalf = () => {
@@ -14,7 +13,7 @@ const LeftHalf = () => {
         <h2 className="text-lg font-bold mb-2">Good Afternoon, Paul</h2>
         <p className='mb-2'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ullam velit voluptates voluptate fugiat aspernatur sit, cumque tempora assumenda placeat </p>
         <Link
-            href="#"
+            href="/settings"
             className="inline-flex items-center justify-center gap-2.5 border border-primary py-4 px-10 text-center font-medium text-primary hover:bg-opacity-90 lg:px-8 xl:px-10"
         >
             <span>
@@ -199,7 +198,6 @@ const RightHalf = () => {
 
       <div className="bg-gray-200 p-4 mb-4">
         <div className="bg-white">
-          <Calendar />
         </div>
       </div>
 
